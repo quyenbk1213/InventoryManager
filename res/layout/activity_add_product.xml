@@ -1,0 +1,252 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableLayout
+        android:id="@+id/tblAddProduct"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/wrap_view_style"
+        android:stretchColumns="1" >
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status: " />
+
+            <Spinner
+                android:id="@+id/spnProductStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/barcode: " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/edtProductBarcode"
+                    style="@style/editTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_style" />
+
+                <ImageButton
+                    android:id="@+id/imbBarcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:background="@null"
+                    android:src="@drawable/barcode" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name: " />
+
+            <EditText
+                android:id="@+id/edtProductName"
+                style="@style/editTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_style" />
+        </TableRow>
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description: " />
+
+            <EditText
+                android:id="@+id/edtProductDescription"
+                style="@style/editTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_style"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:lines="4" />
+        </TableRow>
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price: " />
+
+            <EditText
+                android:id="@+id/edtProductPrice"
+                style="@style/editTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_style"
+                android:inputType="numberDecimal" />
+        </TableRow>
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qty_product: " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/edtProductQty"
+                    style="@style/editTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_style"
+                    android:inputType="numberDecimal" />
+
+                <Button
+                    android:id="@+id/btnAddProductQty"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                   	android:gravity="center"
+                    android:background="@drawable/bkg_add_button"
+                    android:text="+"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnMinusProductQty"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/bkg_minus_button"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category_name: " />
+
+            <Spinner
+                android:id="@+id/edtProductCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/image_name: " />
+
+            <EditText
+                android:id="@+id/edtProductImage"
+                style="@style/editTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_style" />
+        </TableRow>
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnCaptureProductImage"
+                style="@style/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chụp ảnh" />
+
+            <Button
+                android:id="@+id/btnBrowseProductImage"
+                style="@style/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chọn trong máy" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tblAddProduct"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnSaveProduct"
+            style="@style/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm" />
+
+        <Button
+            android:id="@+id/btnCancelProduct"
+            style="@style/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hủy" />
+    </LinearLayout>
+
+</RelativeLayout>

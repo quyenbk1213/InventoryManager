@@ -1,0 +1,69 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        --> 
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">    
+        <item name="android:windowBackground">@color/custom_theme_color</item>     
+        <item name="android:actionBarStyle">@style/MyActionBar</item>        
+    </style>
+	<style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#CE9B33</item> 
+       
+        <item name="android:titleTextStyle">@style/TitleBarTextColor</item>
+    </style>
+    <style name="TitleBarTextColor" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    
+    <!-- font style -->
+    <style name="CodeFont">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>                  
+    </style>
+    
+    <style name="txtRight" parent="@style/CodeFont">
+        <item name="android:textStyle">normal</item> 
+        <item name="android:layout_marginLeft">10dp</item>             
+    </style>
+    
+    <!-- table row style -->
+    <style name="tableRow">
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+    
+    <!-- table edit text style -->
+    <style name="editTextStyle">
+        
+    </style>
+    
+    <!-- button style -->
+    <style name="buttonStyle">
+        <item name="android:background">@drawable/yellow_button</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+    
+     <!-- row style -->
+    <style name="rowStyle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+</resources>

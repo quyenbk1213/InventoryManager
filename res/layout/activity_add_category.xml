@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableLayout
+        android:id="@+id/tblAddCategory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wrap_view_style"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            style="@style/tableRow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status: " 
+                style="@style/CodeFont"/>
+
+            <Spinner
+                android:id="@+id/spnCategoryStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            style="@style/tableRow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name: " 
+                style="@style/CodeFont"/>
+
+            <EditText
+                android:id="@+id/edtCategoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                style="@style/editTextStyle"
+                 android:background="@drawable/edit_text_style"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            style="@style/tableRow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description: " 
+                style="@style/CodeFont"/>
+
+            <EditText
+                android:id="@+id/edtCategoryDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:background="@drawable/edit_text_style"
+                 style="@style/editTextStyle"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:lines="4" />
+        </TableRow>
+    </TableLayout>
+	<LinearLayout android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/tblAddCategory"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginTop="20dp"
+	    android:orientation="horizontal">
+	    <Button 
+	        android:id="@+id/btnSaveCategory"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/buttonStyle"
+	        android:text="Thêm"/>
+
+	    <Button
+	        android:id="@+id/btnCancelCategory"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/buttonStyle"
+	        android:text="Hủy"/>
+
+	</LinearLayout>
+</RelativeLayout>

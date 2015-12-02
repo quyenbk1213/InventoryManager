@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/rowStyle" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:text="@string/status: " />
+
+            <TextView
+                android:id="@+id/txtCategoryStatus"
+                style="@style/txtRight"
+                android:text="Enable" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:text="@string/name: " />
+
+            <TextView
+                android:id="@+id/txtCategoryName"
+                style="@style/txtRight"
+                android:text="Do dien tu" />
+        </TableRow>
+        
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:text="@string/created_at: " />
+
+            <TextView
+                android:id="@+id/txtCategoryCreatedAt"
+                style="@style/txtRight" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:text="@string/updated_at: " />
+
+            <TextView
+                android:id="@+id/txtCategoryUpdatedAt"
+                style="@style/txtRight" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/CodeFont"
+            android:text="@string/category_count: " />
+
+        <TextView
+            android:id="@+id/txtCategoryCount"
+            style="@style/txtRight" />
+        
+    </LinearLayout>
+
+</RelativeLayout>

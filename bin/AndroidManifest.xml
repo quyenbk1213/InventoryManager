@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.inventorymanager"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/main_activity_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SalesActivity"
+            android:label="@string/title_activity_sales" >
+        </activity>
+        <activity
+            android:name=".ManageProductActivity"
+            android:label="@string/title_activity_manager_product" >
+        </activity>
+        <activity
+            android:name=".ManageCategoryActivity"
+            android:label="@string/title_activity_manage_category" >
+        </activity>
+        <activity
+            android:name=".ManageOrderActivity"
+            android:label="@string/title_activity_manage_order" >
+        </activity>
+        <activity
+            android:name=".ReportActivity"
+            android:label="@string/title_activity_report" >
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name=".AddCategoryActivity"
+            android:label="@string/title_activity_add_category" >
+        </activity>
+        <activity
+            android:name=".DetailCategoryActivity"
+            android:label="@string/title_activity_detail_category" >
+        </activity>
+        <activity
+            android:name=".AddProductActivity"
+            android:label="@string/title_activity_add_product" >
+        </activity>
+    </application>
+
+</manifest>

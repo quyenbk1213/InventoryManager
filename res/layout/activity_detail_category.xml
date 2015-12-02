@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableLayout
+        android:id="@+id/tblDetailCategory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/wrap_view_style"
+        android:stretchColumns="*" >
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:text="@string/status: " />
+
+            <TextView
+                android:id="@+id/txtDetailCategoryStatus"
+                style="@style/txtRight" />
+        </TableRow>
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:text="@string/name: " />
+
+            <TextView
+                android:id="@+id/textDetailCategoryName"
+                style="@style/txtRight" />
+        </TableRow>
+
+        <TableRow
+            style="@style/tableRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:text="@string/description: " />
+
+            <TextView
+                android:id="@+id/txtDetailCategoryDescription"
+                style="@style/txtRight" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:text="@string/category_count: " />
+
+            <TextView
+                android:id="@+id/txtDetailCategoryCount"
+                style="@style/txtRight" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:text="@string/created_at: " />
+
+            <TextView
+                android:id="@+id/txtDetailCategoryCreatedAt"
+                style="@style/txtRight" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/CodeFont"
+                android:text="@string/updated_at: " />
+
+            <TextView
+                android:id="@+id/txtDetailCategoryUpdatedAt"
+                style="@style/txtRight" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tblDetailCategory"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnBackCategory"
+            style="@style/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quay lại" />
+    </LinearLayout>
+
+</RelativeLayout>

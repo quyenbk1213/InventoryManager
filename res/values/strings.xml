@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">InventoryManager</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_activity_name">Quản lý hàng hóa</string>
+    <string name="title_activity_sales">SalesActivity</string>
+    <string name="title_activity_manager_product">ManagerProductActivity</string>
+    <string name="title_activity_manage_category">ManageCategoryActivity</string>
+    <string name="title_activity_manage_order">ManageOrderActivity</string>
+    <string name="title_activity_report">ReportActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_add_category">AddCategoryActivity</string>
+    <string name="name: ">Tên: </string>
+    <string name="description: ">Mô tả: </string>
+    <string name="status: ">Trạng thái: </string>
+    <string name="category_count: ">Số sản phẩm: </string>
+    <string name="created_at: ">Ngày tạo: </string>
+    <string name="updated_at: ">Ngày sửa: </string>
+    <string name="title_activity_detail_category">DetailCategoryActivity</string>
+    <string name="category">Category</string>
+    <string name="title_activity_add_product">AddProductActivity</string>
+    <string name="barcode: ">Barcode: </string>
+    <string name="price: ">Giá: </string>
+    <string name="qty_product: ">Số sản phẩm: </string>
+    <string name="category_name: ">Loại sản phẩm: </string>
+    <string name="image_name: ">Tên ảnh: </string>
+
+</resources>
