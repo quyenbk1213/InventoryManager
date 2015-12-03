@@ -223,4 +223,27 @@ public class ProductDatabase {
 		cursor.close();
 		return product;
 	}
+	
+	public Product getProductByBarcode(String barcode) {
+		Product product = new Product();
+		SQLiteDatabase db = dbHelper.getReadableDatabase();
+		String query = "Select * from " + TABLE_NAME + " where " + COLUMN_BARCODE + " = ? limit 1";
+
+		Cursor cursor = db.rawQuery(query, new String[] { barcode });
+		if (cursor.getCount() == 1) {
+			product.setId(cursor.getInt(cursor.getColumnIndex(COLUMN_ID)));
+			product.setBarcode(cursor.getString(cursor.getColumnIndex(COLUMN_BARCODE)));
+			product.setName(cursor.getString(cursor.getColumnIndex(COLUMN_NAME)));
+			product.setDescription(cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION)));
+			product.setPrice(cursor.getInt(cursor.getColumnIndex(COLUMN_PRICE)));
+			product.setQty(cursor.getInt(cursor.getColumnIndex(COLUMN_QTY)));
+			product.setImage(cursor.getString(cursor.getColumnIndex(COLUMN_IMAGE)));
+			product.setStatus(cursor.getInt(cursor.getColumnIndex(COLUMN_STATUS)));
+			product.setCategory_id(cursor.getInt(cursor.getColumnIndex(COLUMN_CATEGORY_ID)));
+			product.setCreated_at(cursor.getString(cursor.getColumnIndex(COLUMN_CREATED)));
+			product.setUpdate_at(cursor.getString(cursor.getColumnIndex(COLUMN_UPDATED)));
+		}
+		cursor.close();
+		return product;
+	}
 }

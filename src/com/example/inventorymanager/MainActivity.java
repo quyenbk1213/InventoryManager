@@ -32,12 +32,12 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		gridData = new Grid[] { new Grid(R.drawable.add_button, "Bán hàng"),
-				new Grid(R.drawable.add_button, "Quản lý sản phẩm"),
-				new Grid(R.drawable.add_button, "Quản lý loại hàng"),
-				new Grid(R.drawable.add_button, "Quản lý đơn hàng"),
-				new Grid(R.drawable.add_button, "Báo cáo"),
-				new Grid(R.drawable.add_button, "Cấu hình") };
+		gridData = new Grid[] { new Grid(R.drawable.sale, "Bán hàng"),
+				new Grid(R.drawable.product, "Quản lý sản phẩm"),
+				new Grid(R.drawable.category, "Quản lý loại hàng"),
+				new Grid(R.drawable.order, "Quản lý đơn hàng"),
+				new Grid(R.drawable.report, "Báo cáo"),
+				new Grid(R.drawable.exit, "Cấu hình") };
 
 		initWidget();
 	}
@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
 					openActivity(ReportActivity.class);
 					break;
 				case SETTINGS:
-					openActivity(SettingActivity.class);
+					finish();
 					break;
 				default:
 					break;
