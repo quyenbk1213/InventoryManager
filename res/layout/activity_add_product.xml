@@ -201,12 +201,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/image_name: " />
 
-            <EditText
-                android:id="@+id/edtProductImage"
-                style="@style/editTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edit_text_style" />
+            <ImageView 
+		        android:id="@+id/imgProduct"
+		        android:layout_width="100dp"
+		        android:layout_height="100dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp"
+		        android:layout_marginBottom="5dp"
+		        android:layout_marginTop="5dp" />
         </TableRow>
 
         <TableRow
