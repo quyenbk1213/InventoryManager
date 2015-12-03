@@ -29,6 +29,7 @@ public class AddProductActivity extends Activity {
 			edtProductPrice, edtProductQty, edtProductImage;
 	private Button btnAddProductQty, btnMinusProductQty;
 	private ImageButton imbBarcode;
+	private int i;
 
 	private ArrayAdapter<SpinerLabel> spinStatusAdapter;
 	private ArrayList<SpinerLabel> arrStatus = new ArrayList<SpinerLabel>();
