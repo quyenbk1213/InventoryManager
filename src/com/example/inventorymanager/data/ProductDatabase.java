@@ -44,7 +44,7 @@ public class ProductDatabase {
 				+ COLUMN_QTY
 				+ " integer,"
 				+ COLUMN_IMAGE
-				+ " text,"
+				+ " blob,"
 				+ COLUMN_STATUS
 				+ " TINYINT,"
 				+ COLUMN_CATEGORY_ID
@@ -147,7 +147,7 @@ public class ProductDatabase {
 						.getColumnIndex(COLUMN_NAME)), cs.getString(cs
 						.getColumnIndex(COLUMN_DESCRIPTION)), cs.getInt(cs
 						.getColumnIndex(COLUMN_PRICE)), cs.getInt(cs
-						.getColumnIndex(COLUMN_QTY)), cs.getString(cs
+						.getColumnIndex(COLUMN_QTY)), cs.getBlob(cs
 						.getColumnIndex(COLUMN_IMAGE)), cs.getInt(cs
 						.getColumnIndex(COLUMN_STATUS)), cs.getInt(cs
 						.getColumnIndex(COLUMN_CATEGORY_ID)), cs.getString(cs
@@ -214,7 +214,7 @@ public class ProductDatabase {
 			product.setDescription(cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION)));
 			product.setPrice(cursor.getInt(cursor.getColumnIndex(COLUMN_PRICE)));
 			product.setQty(cursor.getInt(cursor.getColumnIndex(COLUMN_QTY)));
-			product.setImage(cursor.getString(cursor.getColumnIndex(COLUMN_IMAGE)));
+			product.setImage(cursor.getBlob(cursor.getColumnIndex(COLUMN_IMAGE)));
 			product.setStatus(cursor.getInt(cursor.getColumnIndex(COLUMN_STATUS)));
 			product.setCategory_id(cursor.getInt(cursor.getColumnIndex(COLUMN_CATEGORY_ID)));
 			product.setCreated_at(cursor.getString(cursor.getColumnIndex(COLUMN_CREATED)));
@@ -237,7 +237,7 @@ public class ProductDatabase {
 			product.setDescription(cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION)));
 			product.setPrice(cursor.getInt(cursor.getColumnIndex(COLUMN_PRICE)));
 			product.setQty(cursor.getInt(cursor.getColumnIndex(COLUMN_QTY)));
-			product.setImage(cursor.getString(cursor.getColumnIndex(COLUMN_IMAGE)));
+			product.setImage(cursor.getBlob(cursor.getColumnIndex(COLUMN_IMAGE)));
 			product.setStatus(cursor.getInt(cursor.getColumnIndex(COLUMN_STATUS)));
 			product.setCategory_id(cursor.getInt(cursor.getColumnIndex(COLUMN_CATEGORY_ID)));
 			product.setCreated_at(cursor.getString(cursor.getColumnIndex(COLUMN_CREATED)));

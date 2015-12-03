@@ -10,7 +10,7 @@ public class Product {
 	private String description;
 	private int price;
 	private int qty;
-	private String image;
+	private byte[] image;
 	private int status;
 	private int category_id;
 	private String created_at;
@@ -18,7 +18,7 @@ public class Product {
 	public Product(){
 		
 	}
-	public Product(int id, String barcode, String name, String description, int price, int qty, String image, int status, int category_id, String created_at, String update_at){
+	public Product(int id, String barcode, String name, String description, int price, int qty, byte[] image, int status, int category_id, String created_at, String update_at){
 		this.id = id;
 		this.barcode = barcode;
 		this.name = name;
@@ -30,6 +30,17 @@ public class Product {
 		this.category_id = category_id;
 		this.created_at = created_at;
 		this.update_at = update_at;
+	}
+	public Product(int id, String barcode, String name, String description, int price, int qty, byte[] image, int status, int category_id){
+		this.id = id;
+		this.barcode = barcode;
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.qty = qty;
+		this.image = image;		
+		this.status = status;
+		this.category_id = category_id;
 	}
 	public int getId() {
 		return id;
@@ -67,10 +78,10 @@ public class Product {
 	public void setQty(int qty) {
 		this.qty = qty;
 	}
-	public String getImage() {
+	public byte[] getImage() {
 		return image;
 	}
-	public void setImage(String image) {
+	public void setImage(byte[] image) {
 		this.image = image;
 	}
 	public int getStatus() {
