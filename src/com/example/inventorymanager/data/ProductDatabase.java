@@ -79,16 +79,22 @@ public class ProductDatabase {
 	public long addProduct(Product p) {
 		if (!isExistedBarcode(p.getBarcode())) {
 			SQLiteDatabase db = dbHelper.getWritableDatabase();
-			ContentValues values = new ContentValues();
-			values.put(COLUMN_BARCODE, p.getBarcode());
-			values.put(COLUMN_NAME, p.getName());
-			values.put(COLUMN_DESCRIPTION, p.getDescription());
-			values.put(COLUMN_PRICE, p.getPrice());
-			values.put(COLUMN_QTY, p.getQty());
-			values.put(COLUMN_IMAGE, p.getImage());
-			values.put(COLUMN_STATUS, p.getStatus());
-			values.put(COLUMN_CATEGORY_ID, p.getCategory_id());
-			return db.insert(TABLE_NAME, null, values);
+			ContentValues productValues = new ContentValues();
+			productValues.put(COLUMN_BARCODE, p.getBarcode());
+			productValues.put(COLUMN_NAME, p.getName());
+			productValues.put(COLUMN_DESCRIPTION, p.getDescription());
+			productValues.put(COLUMN_PRICE, p.getPrice());
+			productValues.put(COLUMN_QTY, p.getQty());
+			productValues.put(COLUMN_IMAGE, p.getImage());
+			productValues.put(COLUMN_STATUS, p.getStatus());
+			productValues.put(COLUMN_CATEGORY_ID, p.getCategory_id());
+			long result = db.insert(TABLE_NAME, null, productValues);
+			if(result != -1){
+				
+				return result;
+			}else{
+				return result;
+			}			
 		} else {
 			return -2;
 		}

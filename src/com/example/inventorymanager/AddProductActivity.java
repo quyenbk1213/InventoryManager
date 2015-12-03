@@ -34,7 +34,7 @@ public class AddProductActivity extends Activity {
 	private ArrayList<SpinerLabel> arrStatus = new ArrayList<SpinerLabel>();
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) { 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_product);
 		arrStatus.add(new SpinerLabel(Category.ENABLE, Category.ENABLE_STRING));
