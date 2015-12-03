@@ -1,7 +1,7 @@
 package com.example.inventorymanager;
 
 import java.util.ArrayList;
-
+    
 import com.example.inventorymanager.data.Category;
 import com.example.inventorymanager.data.CategoryDatabase;
 import com.example.inventorymanager.data.SpinerLabel;
