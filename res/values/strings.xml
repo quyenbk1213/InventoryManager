@@ -25,6 +25,13 @@
     <string name="price: ">Giá: </string>
     <string name="qty_product: ">Số sản phẩm: </string>
     <string name="category_name: ">Loại sản phẩm: </string>
-    <string name="image_name: ">Tên ảnh: </string>
+    <string name="image_name: ">Hình ảnh: </string>
+    
+    <string name="order_id: ">Mã hóa đơn: </string>
+    <string name="order_date: ">Ngày: </string>
+    <string name="order_add">Thêm sản phẩm</string>
+    <string name="order_total_price: ">Tổng tiền: </string>
+
+    <string name="item_name: ">Tên sản phẩm: </string>
 
 </resources>

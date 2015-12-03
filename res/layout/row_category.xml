@@ -16,8 +16,7 @@
 
             <TextView
                 android:id="@+id/txtCategoryStatus"
-                style="@style/txtRight"
-                android:text="Enable" />
+                style="@style/txtRight"/>
         </TableRow>
 
         <TableRow
@@ -30,10 +29,20 @@
 
             <TextView
                 android:id="@+id/txtCategoryName"
-                style="@style/txtRight"
-                android:text="Do dien tu" />
+                style="@style/txtRight"/>
         </TableRow>
         
+        <TableRow 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+	            style="@style/CodeFont"
+	            android:text="@string/category_count: " />
+
+	        <TextView
+	            android:id="@+id/txtCategoryCount"
+	            style="@style/txtRight" />
+        </TableRow>
 
         <TableRow
             android:layout_width="wrap_content"
@@ -60,22 +69,4 @@
                 style="@style/txtRight" />
         </TableRow>
     </TableLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:orientation="horizontal" >
-
-        <TextView
-            style="@style/CodeFont"
-            android:text="@string/category_count: " />
-
-        <TextView
-            android:id="@+id/txtCategoryCount"
-            style="@style/txtRight" />
-        
-    </LinearLayout>
-
 </RelativeLayout>
