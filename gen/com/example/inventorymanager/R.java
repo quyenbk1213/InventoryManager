@@ -45,10 +45,11 @@ public final class R {
         public static final int male_icon=0x7f020010;
         public static final int order=0x7f020011;
         public static final int product=0x7f020012;
-        public static final int report=0x7f020013;
-        public static final int sale=0x7f020014;
-        public static final int wrap_view_style=0x7f020015;
-        public static final int yellow_button=0x7f020016;
+        public static final int product_defaut=0x7f020013;
+        public static final int report=0x7f020014;
+        public static final int sale=0x7f020015;
+        public static final int wrap_view_style=0x7f020016;
+        public static final int yellow_button=0x7f020017;
     }
     public static final class id {
         public static final int action_delete=0x7f090032;
