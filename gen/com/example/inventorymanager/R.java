@@ -51,9 +51,9 @@ public final class R {
         public static final int yellow_button=0x7f020016;
     }
     public static final class id {
-        public static final int action_delete=0x7f09002c;
-        public static final int action_edit=0x7f09002b;
-        public static final int action_settings=0x7f09002a;
+        public static final int action_delete=0x7f090032;
+        public static final int action_edit=0x7f090031;
+        public static final int action_settings=0x7f090030;
         public static final int btnAddCategory=0x7f090020;
         public static final int btnAddProduct=0x7f090022;
         public static final int btnAddProductQty=0x7f09000e;
@@ -77,6 +77,7 @@ public final class R {
         public static final int imbBarcode=0x7f090009;
         public static final int imgIcon=0x7f090023;
         public static final int imgProduct=0x7f090011;
+        public static final int ivProduct=0x7f09002a;
         public static final int lvCategory=0x7f09001f;
         public static final int lvProduct=0x7f090021;
         public static final int spnCategoryStatus=0x7f090001;
@@ -85,11 +86,16 @@ public final class R {
         public static final int tblAddProduct=0x7f090006;
         public static final int tblDetailCategory=0x7f090016;
         public static final int textDetailCategoryName=0x7f090018;
-        public static final int txtCategoryCount=0x7f090029;
-        public static final int txtCategoryCreatedAt=0x7f090027;
+        public static final int tvProductBarcode=0x7f09002d;
+        public static final int tvProductName=0x7f09002b;
+        public static final int tvProductPrice=0x7f09002e;
+        public static final int tvProductQty=0x7f09002f;
+        public static final int tvProductStatus=0x7f09002c;
+        public static final int txtCategoryCount=0x7f090027;
+        public static final int txtCategoryCreatedAt=0x7f090028;
         public static final int txtCategoryName=0x7f090026;
         public static final int txtCategoryStatus=0x7f090025;
-        public static final int txtCategoryUpdatedAt=0x7f090028;
+        public static final int txtCategoryUpdatedAt=0x7f090029;
         public static final int txtDetailCategoryCount=0x7f09001a;
         public static final int txtDetailCategoryCreatedAt=0x7f09001b;
         public static final int txtDetailCategoryDescription=0x7f090019;
@@ -110,6 +116,7 @@ public final class R {
         public static final int activity_setting=0x7f030009;
         public static final int grid_main=0x7f03000a;
         public static final int row_category=0x7f03000b;
+        public static final int row_product=0x7f03000c;
     }
     public static final class menu {
         public static final int add_category=0x7f080000;

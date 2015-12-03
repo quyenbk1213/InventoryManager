@@ -4,6 +4,9 @@ public class Product {
 	public static final int ENABLE = 1;
 	public static final int DISABLE = 2;
 	
+	public static final String ENABLE_STRING = "Cho phép";
+	public static final String DISABLE_STRING = "Vô hiệu hóa";
+	
 	private int id;
 	private String barcode;
 	private String name;
@@ -76,6 +79,15 @@ public class Product {
 	public int getStatus() {
 		return status;
 	}
+	
+	public String getStringStatus(){
+		if(this.status == ENABLE){
+			return ENABLE_STRING;
+		}else {
+			return DISABLE_STRING;
+		}
+	}
+	
 	public void setStatus(int status) {
 		this.status = status;
 	}
