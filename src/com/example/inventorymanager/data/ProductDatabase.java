@@ -22,8 +22,10 @@ public class ProductDatabase {
 	public static final String COLUMN_CREATED = "created_at";
 	public static final String COLUMN_UPDATED = "updated_at";
 	DatabaseHelper dbHelper;
+	Context context;
 
 	public ProductDatabase(Context context) {
+		this.context = context;
 		dbHelper = new DatabaseHelper(context);
 	}
 
@@ -89,9 +91,8 @@ public class ProductDatabase {
 			productValues.put(COLUMN_STATUS, p.getStatus());
 			productValues.put(COLUMN_CATEGORY_ID, p.getCategory_id());
 			long result = db.insert(TABLE_NAME, null, productValues);
-			if(result != -1){
-				
-				return result;
+			if(result != -1){				
+				return (int)new CategoryDatabase(context).addQtyProduct(p.getCategory_id());
 			}else{
 				return result;
 			}			

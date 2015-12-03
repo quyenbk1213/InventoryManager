@@ -1,5 +1,10 @@
 package com.example.inventorymanager.data;
 
+import java.io.ByteArrayInputStream;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 public class Product {
 	public static final int ENABLE = 1;
 	public static final int DISABLE = 2;
@@ -108,6 +113,9 @@ public class Product {
 	public void setUpdate_at(String update_at) {
 		this.update_at = update_at;
 	}
-	
+	public Bitmap getImageBitmap() {
+		ByteArrayInputStream inputStrim = new ByteArrayInputStream(image);
+        return BitmapFactory.decodeStream(inputStrim);
+	}
 
 }

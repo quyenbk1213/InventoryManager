@@ -132,6 +132,30 @@ public class CategoryDatabase {
 		return list;
 
 	}
+	
+	public ArrayList<Category> getAllEnableCategory() {
+		ArrayList<Category> list = new ArrayList<Category>();
+		SQLiteDatabase db = dbHelper.getReadableDatabase();
+		String sql = "Select * from " + TABLE_NAME + "where " + COLUMN_STATUS + " = " + Category.ENABLE;
+		Cursor cs = db.rawQuery(sql, null);
+		if (cs.getCount() > 0) {
+			cs.moveToFirst();
+			while (cs.isAfterLast() == false) {
+				Category category = new Category(cs.getInt(cs.getColumnIndex(COLUMN_ID)), 
+						cs.getString(cs.getColumnIndex(COLUMN_NAME)),
+						cs.getString(cs.getColumnIndex(COLUMN_DESCRIPTION)), 
+						cs.getInt(cs.getColumnIndex(COLUMN_STATUS)), 
+						cs.getInt(cs.getColumnIndex(COLUMN_COUNT)),
+						cs.getString(cs.getColumnIndex(COLUMN_CREATED)),
+						cs.getString(cs.getColumnIndex(COLUMN_UPDATED)));
+				list.add(category);
+				cs.moveToNext();
+			}
+		}
+		cs.close();
+		return list;
+
+	}
 
 	/**
 	 * Cập nhật thông tin một category
@@ -143,7 +167,6 @@ public class CategoryDatabase {
 	 */
 	public int updateCategory(Category category) {
 		SQLiteDatabase db = dbHelper.getWritableDatabase();
-		Log.d("asdf", category.getName());
 		ContentValues values = new ContentValues();
 		values.put(COLUMN_NAME, category.getName());
 		values.put(COLUMN_DESCRIPTION, category.getDescription());
@@ -153,6 +176,24 @@ public class CategoryDatabase {
 		
 		return db.update(TABLE_NAME, values, COLUMN_ID + " = ?",
 				new String[] { Integer.toString(category.getId()) });
+
+	}
+	
+	public int addQtyProduct(int categoryID) {
+		SQLiteDatabase db = dbHelper.getWritableDatabase();
+		
+		String query = "Select " + COLUMN_COUNT + " from " + TABLE_NAME + " where " + COLUMN_ID
+				+ " = ? limit 1";
+		Cursor cursor = db.rawQuery(query,
+				new String[] { Integer.toString(categoryID) });
+		int count = cursor.getInt(cursor
+				.getColumnIndex(COLUMN_COUNT));
+				
+		ContentValues values = new ContentValues();
+		values.put(COLUMN_COUNT, count + 1);
+		
+		return db.update(TABLE_NAME, values, COLUMN_ID + " = ?",
+				new String[] { Integer.toString(categoryID) });
 
 	}
 

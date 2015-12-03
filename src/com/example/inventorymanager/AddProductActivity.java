@@ -61,7 +61,7 @@ public class AddProductActivity extends Activity {
 		arrStatus.add(new SpinerLabel(Category.DISABLE,
 				Category.DISABLE__STRING));
 		ArrayList<Category> listCategory = new CategoryDatabase(this)
-				.getAllCategory();
+				.getAllEnableCategory();
 		for (int i = 0; i < listCategory.size(); i++) {
 			Category category = listCategory.get(i);
 			arrCategory.add(new SpinerLabel(category.getId(), category
@@ -69,7 +69,15 @@ public class AddProductActivity extends Activity {
 		}
 
 		initWidget();
-
+		//Edit
+		try {
+			Product product = (Product) getIntent().getExtras()
+					.getSerializable("Product");
+			setWidget(product);
+			productID = product.getId();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	private void initWidget() {
@@ -158,6 +166,11 @@ public class AddProductActivity extends Activity {
 				minusProductQty();
 			}
 		});
+	}
+	
+	private void setWidget(Product product) {
+		
+
 	}
 
 	protected void addProductQty() {
